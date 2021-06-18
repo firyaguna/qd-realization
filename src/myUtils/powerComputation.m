@@ -1,4 +1,4 @@
-filepath = 'examples/UniversalMachineFloor/Output/Ns3/QdFiles/';
+filepath = 'examples/DigitalFactory/Output/Ns3/QdFiles/';
 filename = 'Tx0Rx1.txt';
 filename = strcat(filepath,filename);
 fid = fopen(filename,'r');
@@ -50,7 +50,7 @@ end
 % pathlossdB = max(pathlossdB, 0);
 
 %%
-filepath = 'examples/UniversalMachineFloor/Input/';
+filepath = 'examples/DigitalFactory/Input/';
 
 filename = 'NodePosition0.dat';
 filename = strcat(filepath,filename);
@@ -87,7 +87,7 @@ legend('Ray trace','InF LOS','InF NLOS SH','InF NLOS DH');
 title('Digital Factory 60 GHz');
 %%
 
-filename = 'examples/UniversalMachineFloor/Output/Visualizer/RoomCoordinates.csv';
+filename = 'examples/DigitalFactory/Output/Visualizer/RoomCoordinates.csv';
 roomCoords = readRoomCoordinates(filename);
 [Tri,X,Y,Z] = roomCoords2triangles(roomCoords); % triangle vertices
 figure(2);

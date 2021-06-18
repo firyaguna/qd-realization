@@ -8,10 +8,8 @@ classdef PositionGenerator < handle
     end
     
     methods
-        function obj = PositionGenerator(x0,y0,z0)
-            %UNTITLED Construct an instance of this class
-            %   Detailed explanation goes here
-            obj.pos = [x0, y0, z0];
+        function obj = PositionGenerator(varargin)
+            obj.pos = zeros(0,3);
         end
         
         function nextPos(obj,x,y,z)

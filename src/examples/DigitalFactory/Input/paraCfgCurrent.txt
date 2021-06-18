@@ -1,7 +1,7 @@
 ParameterName	ParameterValue
 environmentFileName	DigitalFactory.xml
 indoorSwitch	0
-numberOfTimeDivisions	8
+numberOfTimeDivisions	2401
 referencePoint	[0,0,0]
 selectPlanesByDist	inf
 switchDiffuseComponent	0
