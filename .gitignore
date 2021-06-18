@@ -10,6 +10,7 @@
 !/src/visualizer/
 !/src/quaternions/
 !/src/myUtils/
+!/src/material_libraries
 
 # Ignore cached files
 **/cachedCadOutput.mat
