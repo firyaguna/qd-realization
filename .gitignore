@@ -9,6 +9,7 @@
 !/src/examples/
 !/src/visualizer/
 !/src/quaternions/
+!/src/myUtils/
 
 # Ignore cached files
 **/cachedCadOutput.mat
