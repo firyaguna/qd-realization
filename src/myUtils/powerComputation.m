@@ -68,10 +68,10 @@ tx_position = repmat(tx_position,[tsteps,1]);
 distance = vecnorm(tx_position-rx_position,2,2);
 
 %% 3gpp InF pathloss
-
-pl_L = @(d) 31.84 + 21.50.*log10(d) + 19.*log10(60);
-pl_SH = @(d) 32.4 + 23.*log10(d) + 20.*log10(60);
-pl_DH = @(d) 33.63 + 21.9.*log10(d) + 20.*log10(60);
+freqGHz = 3.6;
+pl_L = @(d) 31.84 + 21.50.*log10(d) + 19.*log10(freqGHz);
+pl_SH = @(d) 32.4 + 23.*log10(d) + 20.*log10(freqGHz);
+pl_DH = @(d) 33.63 + 21.9.*log10(d) + 20.*log10(freqGHz);
 %%
 figure(1);
 clf(1);
@@ -83,8 +83,9 @@ fplot(pl_DH,[5,20],'m-.');
 grid on;
 xlabel('Distance (m)');
 ylabel('Path loss (dB)');
-legend('Ray trace','InF LOS','InF NLOS SH','InF NLOS DH');
-title('Digital Factory 60 GHz');
+legend('Ray trace','InF LOS','InF NLOS SH','InF NLOS DH',...
+    'location','best');
+title('Digital Factory 3.6 GHz');
 %%
 
 filename = 'examples/DigitalFactory/Output/Visualizer/RoomCoordinates.csv';
@@ -96,10 +97,11 @@ trisurf(Tri,X,Y,Z,...
     'FaceColor',[0.9,0.9,0.9],...
     'FaceAlpha',0,...
     'EdgeColor','k');
-[X,Y] = meshgrid(1.5:24.5,1.5:24.5);
-Z = reshape(pathlossdB(2:end),[24,24]);
+Xgrid = .5:.5:24.5;
+Ygrid = .5:.5:24.5;
+Z = reshape(pathlossdB,[49,49]);
 hold on;
-image(Z,'CDataMapping','scaled');
+image(Xgrid,Ygrid,Z,'CDataMapping','scaled');
 view(0,90);
 xlabel('x (meter)');
 ylabel('y (meter)');

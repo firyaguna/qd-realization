@@ -9,7 +9,7 @@ switchQDModel	tgayMeasurements
 totalNumberOfReflections	1
 totalTimeDuration	20
 switchSaveVisualizerFiles	1
-carrierFrequency	60e9
+carrierFrequency	3.6e9
 qdFilesFloatPrecision	6
 useOptimizedOutputToFile	1
 outputFormat	txt
