@@ -6,10 +6,10 @@ referencePoint	[0,0,0]
 selectPlanesByDist	inf
 switchDiffuseComponent	0
 switchQDModel	tgayMeasurements
-totalNumberOfReflections	1
+totalNumberOfReflections	2
 totalTimeDuration	20
 switchSaveVisualizerFiles	1
-carrierFrequency	3.6e9
+carrierFrequency	60e9
 qdFilesFloatPrecision	6
 useOptimizedOutputToFile	1
 outputFormat	txt

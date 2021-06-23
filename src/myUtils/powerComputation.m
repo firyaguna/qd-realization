@@ -68,7 +68,7 @@ tx_position = repmat(tx_position,[tsteps,1]);
 distance = vecnorm(tx_position-rx_position,2,2);
 
 %% 3gpp InF pathloss
-freqGHz = 3.6;
+freqGHz = 60;
 pl_L = @(d) 31.84 + 21.50.*log10(d) + 19.*log10(freqGHz);
 pl_SH = @(d) 32.4 + 23.*log10(d) + 20.*log10(freqGHz);
 pl_DH = @(d) 33.63 + 21.9.*log10(d) + 20.*log10(freqGHz);
@@ -85,7 +85,7 @@ xlabel('Distance (m)');
 ylabel('Path loss (dB)');
 legend('Ray trace','InF LOS','InF NLOS SH','InF NLOS DH',...
     'location','best');
-title('Digital Factory 3.6 GHz');
+title('Digital Factory 60 GHz');
 %%
 
 filename = 'examples/DigitalFactory/Output/Visualizer/RoomCoordinates.csv';
