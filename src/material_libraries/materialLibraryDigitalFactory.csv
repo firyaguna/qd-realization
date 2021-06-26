@@ -1,5 +1,5 @@
 Reflector,Material,RelativePermittivity
-Walls,Metal,Inf
+Walls,Metal,99999
 Floor,Concrete,6.25+0.3j
-Ceiling,Metal,Inf
-Machines,Metal,Inf
+Ceiling,Metal,99999
+Machines,Metal,99999
